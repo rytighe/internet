@@ -1,8 +1,7 @@
 package net.rytighe.internet;
 
 import net.rytighe.internet.pageobjects.DropdownPage;
-import cucumber.api.PendingException;
-import cucumber.api.java.en.When;
+import cucumber.api.java.en.Then;
 
 public class DropdownDefinitions {
 	private DropdownPage dropdownPage;
@@ -11,7 +10,7 @@ public class DropdownDefinitions {
 		this.dropdownPage = dropdownPage;
 	}
 	
-	@When("^I set the dropdown to option (\\d+)$")
+	@Then("^I can set the dropdown to option (\\d+)$")
 	public void i_set_the_dropdown_to_option(int arg1) throws Throwable {
 	    dropdownPage.setDropdown(arg1);;
 	}

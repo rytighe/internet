@@ -7,6 +7,7 @@ Background:
 		Then I count links 
 	
 	Scenario:
+		The-Internet dropdown page contains a dropdown
 		When I access the dropdown page
-		And I set the dropdown to option 1
+		Then I can set the dropdown to option 1
 		
