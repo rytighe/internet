@@ -1,4 +1,4 @@
-package net.rytighe.internet;
+package net.rytighe.internet.definitions;
 
 import net.rytighe.internet.pageobjects.DropdownPage;
 import cucumber.api.java.en.Then;

@@ -22,8 +22,10 @@ public class LandingPage {
 	@FindBy(xpath="//a[@href='/dropdown']")
 	WebElement dropdownLink;
 	
+	@FindBy(xpath="//a[@href='/dynamic_loading']")
+	WebElement dynamicLoadingLink;
+	
 	public String getTitle(){
-		System.out.println(title);
 		return title.getText();
 	}
 	
@@ -32,9 +34,7 @@ public class LandingPage {
 	}
 	
 	public LandingPage(){
-		System.out.println("PageOne CTOR");
 		PageFactory.initElements(SharedDriver.getInstance(), this);
-		
 	}
 	
 	public DownloadPage download(){
@@ -46,6 +46,10 @@ public class LandingPage {
 		dropdownLink.click();
 		return new DropdownPage();
 	}
-	
+
+	public DynamicLoadingPage dynamicLoading() {
+		dynamicLoadingLink.click();
+		return new DynamicLoadingPage();
+	}
 	
 }

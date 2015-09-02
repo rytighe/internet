@@ -1,4 +1,4 @@
-package net.rytighe.internet;
+package net.rytighe.internet.definitions;
 
 import static org.junit.Assert.assertTrue;
 import net.rytighe.internet.SharedDriver;

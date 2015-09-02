@@ -15,7 +15,6 @@ public class DropdownPage {
 	private Select select;
 	
 	public DropdownPage(){
-		System.out.println("DownloadPage CTOR");
 		PageFactory.initElements(SharedDriver.getInstance(), this);
 		select = new Select(dropdown);
 	}
@@ -30,6 +29,6 @@ public class DropdownPage {
 
 	public void setDropdown(int arg1) {
 		this.select.selectByIndex(arg1);
-		
 	}
+	
 }

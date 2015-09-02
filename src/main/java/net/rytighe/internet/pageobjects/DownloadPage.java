@@ -14,7 +14,6 @@ public class DownloadPage {
 	private List<WebElement> links;
 	
 	public DownloadPage(){
-		System.out.println("DownloadPage CTOR");
 		PageFactory.initElements(SharedDriver.getInstance(), this);
 	}
 
