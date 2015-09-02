@@ -7,8 +7,8 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class) 
 @CucumberOptions(
 			format = {"pretty", "html:target/cucumber-html-report"},
-			features = { "classpath:net/rytighe/cukes3/"},
-			glue = {"net.rytighe.cukes3"}
+			features = { "classpath:net/rytighe/internet/"},
+			glue = {"net.rytighe.internet"}
 			
 			
 		) 
