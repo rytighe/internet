@@ -1,10 +1,11 @@
 package net.rytighe.internet.definitions;
 
+import static org.junit.Assert.assertTrue;
 import net.rytighe.internet.pageobjects.DynamicLoadingExamplePage;
+import net.rytighe.internet.pageobjects.DynamicLoadingIncorrectExamplePage;
 import net.rytighe.internet.pageobjects.DynamicLoadingPage;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import static org.junit.Assert.*;
 
 public class DynamicLoadingDefinitions {
 	
@@ -28,6 +29,11 @@ public class DynamicLoadingDefinitions {
 	@Then("^I should see \"(.+)\" at the finish$")
 	public void i_should_wait_for_the_finish(String text) throws Throwable {
 	    assertTrue(text.equals(examplePage.getFinishText()));
+	}
+	
+	@Then("^I should see \"([^\"]*)\" immediately$")
+	public void i_should_see_immediately(String text) throws Throwable {
+	    assertTrue(text.equals(new DynamicLoadingIncorrectExamplePage().getFinishText()));
 	}
 
 
