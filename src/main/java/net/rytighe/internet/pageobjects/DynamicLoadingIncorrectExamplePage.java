@@ -1,10 +1,11 @@
 package net.rytighe.internet.pageobjects;
 
-import net.rytighe.internet.SharedDriver;
-
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import net.rytighe.internet.SharedDriver;
 
 public class DynamicLoadingIncorrectExamplePage extends AbstractPage {
 	
@@ -27,7 +28,12 @@ public class DynamicLoadingIncorrectExamplePage extends AbstractPage {
 	}
 	
 	public String getFinishText(){
-		return finish.getText();
+		try {
+			return finish.getText();
+		} catch (NoSuchElementException nsee){
+			return "";
+		}
+		
 	}
 	
 }
