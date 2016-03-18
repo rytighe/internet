@@ -1,6 +1,7 @@
 package net.rytighe.internet.definitions;
 
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 import net.rytighe.internet.pageobjects.DynamicLoadingExamplePage;
 import net.rytighe.internet.pageobjects.DynamicLoadingIncorrectExamplePage;
 import net.rytighe.internet.pageobjects.DynamicLoadingPage;
@@ -33,7 +34,7 @@ public class DynamicLoadingDefinitions {
 	
 	@Then("^I should see \"([^\"]*)\" immediately$")
 	public void i_should_see_immediately(String text) throws Throwable {
-	    assertTrue(text.equals(new DynamicLoadingIncorrectExamplePage().getFinishText()));
+	    assertFalse(text.equals(new DynamicLoadingIncorrectExamplePage().getFinishText()));
 	}
 
 
