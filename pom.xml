@@ -21,9 +21,9 @@
 
 	        <dependency>
             <groupId>info.cukes</groupId>
-            <artifactId>cucumber-junit</artifactId>
-            <version>${cucumber.version}</version>
-            <scope>test</scope>
+	            <artifactId>cucumber-junit</artifactId>
+        	    <version>${cucumber.version}</version>
+		<scope>test</scope>
         </dependency>
 
         <dependency>
