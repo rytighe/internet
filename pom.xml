@@ -10,7 +10,6 @@
        		<cucumber.version>1.2.3</cucumber.version>
        		<maven.compiler.version>3.3</maven.compiler.version>
   	</properties>
-
 	<dependencies>
 	        <dependency>
 			<groupId>info.cukes</groupId>
